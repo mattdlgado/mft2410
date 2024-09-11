@@ -1,0 +1,39 @@
+---
+import Card from "../components/Card.astro";
+import data from "../data/data.json";
+import Section from "./Section.astro";
+---
+
+<Section
+  t1="Expo"
+  t2="IMMUNE"
+  class="border-t border-t-primary-400 bg-[url('/assets/images/expoimmune.webp')] bg-center bg-cover bg-fixed"
+>
+  <div class="grid gap-10 items-center lg:grid-cols-2">
+    <p>
+      En esta {data.edition} edición de Madridfortech, nos complace presentar Expoimmune,
+      un espacio que brinda a nuestros estudiantes la oportunidad de mostrar sus
+      habilidades en un entorno profesional real. Expoimmune les permitirá presentar
+      sus proyectos frente a empresas que buscan talento emergente, demostrando el
+      alto nivel y potencial de nuestros alumnos y alumnas, y facilitando conexiones
+      clave entre jóvenes profesionales y el ecosistema empresarial.
+    </p>
+    <Card>
+      <img
+        src="/assets/logos/besecure-logo-white.svg"
+        alt=""
+        height="144"
+        width="144"
+        loading="lazy"
+      />
+      <p>
+        <strong>BeSecure</strong>, un innovador proyecto de entrenamiento
+        anti-phishing, potenciado por inteligencia artificial que tres de
+        nuestros estudiantes del Bachelor en Ingeniería de Desarrollo de
+        Software, Marcos López Garau, Adrián Tomás Sánchez y Nicolás Pertierra
+        Sandoval, están trabajando en colaboración con el Instituto Nacional de
+        Ciberseguridad (Incibe).
+      </p>
+    </Card>
+  </div>
+</Section>

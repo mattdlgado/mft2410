@@ -1,0 +1,20 @@
+---
+import data from "../data/data.json";
+import Section from "./Section.astro";
+---
+
+<Section class="bg-[url('/assets/images/madrid.webp')] bg-center bg-cover bg-fixed">
+  <div class="grid lg:grid-cols-2 gap-4 lg:gap-10">
+    <h2 class="text-5xl uppercase font-black">
+      Madrid como Hub de talento Tech
+    </h2>
+    <p>
+      El evento definitivo de generación de empleo y oportunidades vinculadas a
+      la innovación y tecnología. Dirigido a los interesados en conocer el
+      presente del sector tech, a quienes buscan empleo y quieren poner a prueba
+      sus habilidades y a los que quieren reorientar su carrera en: {
+        data.programs.map((item) => <strong>{item}, </strong>)
+      }.
+    </p>
+  </div>
+</Section>

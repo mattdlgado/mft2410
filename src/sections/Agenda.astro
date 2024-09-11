@@ -1,0 +1,57 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section id="agenda" light t1="Agenda">
+  <div role="region" tabindex="0" class="overflow-auto w-full">
+    <table
+      class="border border-neutral-300 h-full w-full border-spacing-px text-left border-collapse"
+    >
+      <caption class="text-left mt-2 text-neutral-400"
+        >* La agenda puede sufrir cambios.</caption
+      >
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="2" align="center" style="width: 50%;">ESPACIO 1</th>
+          <th colspan="2" align="center" style="width: 50%;">ESPACIO 2</th>
+        </tr>
+        <tr>
+          <th>HORARIO</th>
+          <th>CONTENIDO</th>
+          <th>PONENTES</th>
+          <th>CONTENIDO</th>
+          <th>PONENTES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10:00 - 10:30h.</td>
+          <td colspan="4" align="center"><strong>Bienvenida</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Section>
+
+<style>
+  caption {
+    caption-side: bottom;
+  }
+
+  th {
+    @apply border p-2 border-solid border-neutral-300;
+  }
+
+  td {
+    @apply border p-2 border-solid border-neutral-300;
+  }
+
+  tr:nth-child(odd) td {
+    @apply bg-neutral-100;
+  }
+
+  tr > td:first-child {
+    @apply whitespace-nowrap;
+  }
+</style>

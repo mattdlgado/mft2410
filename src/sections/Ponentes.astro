@@ -1,0 +1,43 @@
+---
+import data from "../data/data.json";
+import Section from "./Section.astro";
+---
+
+<Section id="ponentes" t1="Ponentes" t2="confirmados">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
+    {
+      data.people.map((item) => (
+        <>
+          <div class="mb-4">
+            <img
+              src={`https://publicimmuneassets.s3.eu-west-1.amazonaws.com/people/${item.photo}.webp`}
+              alt={item.name}
+              width="512"
+              height="675"
+              loading="lazy"
+              class="w-full object-cover mb-4"
+            />
+            {item.logo && (
+              <>
+                <img
+                  src={`https://publicimmuneassets.s3.eu-west-1.amazonaws.com/logos/${item.logo[0]}`}
+                  alt={item.logo[1]}
+                  width="144"
+                  height="24"
+                  loading="lazy"
+                  class="max-h-6 object-contain object-left mb-4"
+                />
+              </>
+            )}
+            <h3>{item.name}</h3>
+            {item.position && (
+              <p>
+                <small>{item.position}</small>
+              </p>
+            )}
+          </div>
+        </>
+      ))
+    }
+  </div>
+</Section>

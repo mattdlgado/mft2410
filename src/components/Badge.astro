@@ -1,0 +1,19 @@
+---
+interface Props {
+  text?: string;
+  red?: boolean;
+}
+
+const { text, red } = Astro.props;
+---
+
+<span
+  class:list={[
+    "border border-neutral-50/10 backdrop-blur-2xl inline-flex items-center gap-1 py-1 px-2",
+    { "bg-primary-400": red },
+  ]}
+>
+  <slot name="icon" />
+  {text}
+  <slot />
+</span>

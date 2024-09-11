@@ -1,0 +1,48 @@
+---
+import Card from "../components/Card.astro";
+import Section from "./Section.astro";
+---
+
+<Section
+  t1="Audiencia"
+  class="bg-[url('/assets/images/audiencia.webp')] bg-center bg-cover bg-fixed"
+>
+  <div class="grid md:grid-cols-3 gap-1">
+    <Card class="flex-col">
+      <p>
+        <span class="text-5xl">35%</span><br />Talento Junior<br /><strong
+          >0 a 3 años</strong
+        >
+      </p>
+      <p>
+        Talento Junior con su etapa formativa finalizada -o realizando posgrado-
+        que ya han tenido algunas experiencias profesionales y seguir
+        adquiriendo conocimiento en las primeras etapas de su carrera
+        profesional.
+      </p>
+    </Card>
+    <Card class="flex-col">
+      <p>
+        <span class="text-5xl">45%</span><br />Talento Intermedio<br /><strong
+          >3 a 8 años</strong
+        >
+      </p>
+      <p>
+        Talento Intermedio con algunos años de experiencia que desean seguir
+        creciendo en sus carreras profesionales asumiendo mayor responsabilidad
+        y nuevos desafíos tecnológicos.
+      </p>
+    </Card>
+    <Card class="flex-col">
+      <p>
+        <span class="text-5xl">35%</span><br />Talento Experimentado<br
+        /><strong>>8 años</strong>
+      </p>
+      <p>
+        Talento Experimentado que desea elevar su nivel de responsabilidad,
+        gestionando equipos o bien a través de procesos de upskilling y
+        reskilling que les permitan situarse de forma más competitiva.
+      </p>
+    </Card>
+  </div>
+</Section>
