@@ -20,7 +20,7 @@ import MapPin from "../components/icons/MapPin.astro";
   >
     <ImmuneLogo />
 
-    <div class="flex flex-col items-center gap-4 flex-wrap">
+    <div class="flex flex-col items-center gap-4">
       <LogoWhite />
 
       <h1 class="text-xl">
@@ -29,7 +29,7 @@ import MapPin from "../components/icons/MapPin.astro";
         > de encuentro de talento tecnológico
       </h1>
 
-      <p class="text-xl flex gap-1">
+      <p class="text-xl flex gap-1 flex-wrap">
         <Badge text={data.date}>
           <CalendarEvent slot="icon" />
         </Badge>
