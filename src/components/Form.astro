@@ -15,10 +15,10 @@
 
 <style>
   div :global(.hbspt-form, form) {
-    height: 100%;
+    @apply h-dvh;
   }
 
-  div :global(form) {
+  div :global(.hbspt-form) {
     @apply bg-neutral-800/25 backdrop-blur-2xl p-5 accent-primary-400 flex flex-col justify-center;
   }
 
@@ -64,5 +64,9 @@
 
   div :global(.hs-button) {
     @apply border border-neutral-50/25 py-2 px-4 cursor-pointer;
+  }
+
+  div :global(.submitted-message) {
+    @apply w-full h-full flex items-center justify-center text-center;
   }
 </style>
