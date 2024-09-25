@@ -24,6 +24,9 @@ const { title, description, keywords, canonical, robots, img } = Astro.props;
       robots={robots}
       img={img}
     />
+    <link rel="preload" href="/assets/images/expoimmune.webp" as="image">
+    <link rel="preload" href="/assets/images/madrid.webp" as="image">
+    <link rel="preload" href="/assets/images/audiencia.webp" as="image">
   </head>
   <body
     class="bg-neutral-950 font-sans text-neutral-50 overflow-x-hidden min-h-dvh"
