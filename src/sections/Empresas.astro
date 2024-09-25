@@ -1,4 +1,5 @@
 ---
+import Areas from "../components/Areas.astro";
 import data from "../data/data.json";
 import Section from "./Section.astro";
 ---
@@ -14,11 +15,10 @@ import Section from "./Section.astro";
       <p class="mb-4">
         Con el objetivo de forjar conexiones significativas entre empresas
         innovadoras y talentos emergentes, este evento es una oportunidad única
-        para aquellos especializados en {
-          data.programs.map((item) => <strong>{item}, </strong>)
-        } enorgulleciendonos contar con la participación de reconocidas empresas
-        del sector tecnológico, las cuales están en búsqueda activa de profesionales
-        apasionados y con ganas de transformar el futuro.
+        para aquellos especializados en <Areas /> enorgulleciendonos contar con la
+        participación de reconocidas empresas del sector tecnológico, las cuales
+        están en búsqueda activa de profesionales apasionados y con ganas de transformar
+        el futuro.
       </p>
       <p class="mb-4">
         Estas organizaciones son pioneras en sus respectivos campos, ofreciendo
@@ -27,9 +27,7 @@ import Section from "./Section.astro";
       </p>
     </div>
 
-    <div
-      class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-1"
-    >
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-1">
       {
         data.business.map((item: { src: string; alt: string }) => (
           <>

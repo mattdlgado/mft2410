@@ -1,0 +1,5 @@
+---
+import data from "../data/data.json";
+---
+
+{data.programs.map((item, index) => (<strong>{item}{index < data.programs.length - 1 ? ", " : ""}</strong>))}

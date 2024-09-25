@@ -1,5 +1,5 @@
 ---
-import data from "../data/data.json";
+import Areas from "../components/Areas.astro";
 import Section from "./Section.astro";
 ---
 
@@ -12,9 +12,7 @@ import Section from "./Section.astro";
       El evento definitivo de generación de empleo y oportunidades vinculadas a
       la innovación y tecnología. Dirigido a los interesados en conocer el
       presente del sector tech, a quienes buscan empleo y quieren poner a prueba
-      sus habilidades y a los que quieren reorientar su carrera en: {
-        data.programs.map((item) => <strong>{item}, </strong>)
-      }.
+      sus habilidades y a los que quieren reorientar su carrera en: <Areas />.
     </p>
   </div>
 </Section>
