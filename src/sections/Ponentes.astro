@@ -4,7 +4,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="ponentes" t1="Ponentes" t2="confirmados">
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-1">
     {
       data.people.map((item) => (
         <>
@@ -31,7 +31,7 @@ import Section from "./Section.astro";
             )}
             <h3>{item.name}</h3>
             {item.position && (
-              <p>
+              <p class="pe-2">
                 <small>{item.position}</small>
               </p>
             )}
