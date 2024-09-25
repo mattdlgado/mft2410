@@ -1,15 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Pre from "../sections/Pre.astro";
+import Agenda from "../sections/Agenda.astro";
+import Empresas from "../sections/Empresas.astro";
+import Hero from "../sections/Hero.astro";
+import Nav from "../components/Nav.astro";
+import Ponentes from "../sections/Ponentes.astro";
+import Madrid from "../sections/Madrid.astro";
+import Campus from "../sections/Campus.astro";
+import Footer from "../sections/Footer.astro";
+import Gallery from "../sections/Gallery.astro";
+import ExpoImmune from "../sections/ExpoImmune.astro";
+import Audiencia from "../sections/Audiencia.astro";
+import Talleres from "../sections/Talleres.astro";
 ---
 
 <Layout
   title="Madrid4Tech | IMMUNE Technology Institute"
-  description="V edición del evento Madrid4Tech organizado por IMMUNE Technology Institute para unir empresas y profesionales de la tecnología."
+  description="Descubre la V edición de Madrid4Tech, el evento de referencia organizado por IMMUNE Technology Institute que conecta a empresas y profesionales líderes del sector tecnológico."
   keywords="immune, evento, tecnología, madridfortech, madrid, technology"
   canonical="https://madridfortech.com/"
   robots="follow, index"
   img="https://madridfortech.com/share.webp"
 >
-  <Pre />
+  <Hero />
+  <Ponentes />
+  <ExpoImmune />
+  <Empresas />
+  <Agenda />
+  <Madrid />
+  <Nav />
+  <Gallery />
+  <Campus />
+  <Audiencia />
+  <Footer />
 </Layout>

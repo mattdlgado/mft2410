@@ -4,7 +4,7 @@ const { class: className, ...rest } = Astro.props;
 
 <div
   class:list={[
-    "flex gap-8 border border-neutral-50/50 p-8 backdrop-blur-2xl",
+    "flex flex-col gap-8 border border-neutral-50/50 p-8 backdrop-blur-2xl",
     className,
   ]}
   {...rest}

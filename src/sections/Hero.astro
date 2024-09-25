@@ -1,7 +1,11 @@
 ---
+import data from "../data/data.json";
 import Badge from "../components/Badge.astro";
 import EventButton from "../components/EventButton.astro";
 import Form from "../components/Form.astro";
+import CalendarEvent from "../components/icons/CalendarEvent.astro";
+import Clock from "../components/icons/Clock.astro";
+import MapPin from "../components/icons/MapPin.astro";
 import ImmuneLogo from "../components/ImmuneLogo.astro";
 import LogoWhite from "../components/LogoWhite.astro";
 import Video from "../components/Video.astro";
@@ -23,6 +27,18 @@ import Video from "../components/Video.astro";
           >V EDICIÓN</strong
         > de encuentro de talento tecnológico
       </h1>
+
+      <p class="text-xl flex gap-1 flex-wrap justify-center">
+        <Badge text={data.date}>
+          <CalendarEvent slot="icon" />
+        </Badge>
+        <Badge text="10:00h. (CET)">
+          <Clock slot="icon" />
+        </Badge>
+        <Badge text="Paseo de la castellana, 89 / Online">
+          <MapPin slot="icon" />
+        </Badge>
+      </p>
     </div>
 
     <footer>

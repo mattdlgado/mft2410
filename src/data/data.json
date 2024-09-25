@@ -1,36 +1,146 @@
 {
   "edition": "V",
   "date": "9 de octubre del 2024",
-    "legal": {
-      "name": "IMMUNE",
-      "company": "IMMUNE CODING INSTITUTE S.L.",
-      "cif": "B-87979407",
-      "url": "https://www.madridfortech.com/",
-      "email": "central@immune.institute",
-      "address": "Paseo de la Castellana 89, planta baja inferior, local 3, puerta 2, Madrid 28046"
+  "legal": {
+    "name": "IMMUNE",
+    "company": "IMMUNE CODING INSTITUTE S.L.",
+    "cif": "B-87979407",
+    "url": "https://www.madridfortech.com/",
+    "email": "central@immune.institute",
+    "address": "Paseo de la Castellana 89, planta baja inferior, local 3, puerta 2, Madrid 28046"
+  },
+  "programs": [
+    "Data Science",
+    "Ciberseguridad",
+    "Desarrollo Web",
+    "Inteligencia Artificial",
+    "Cloud Computing",
+    "Diseño UX/UI"
+  ],
+  "people": [
+    {
+      "photo": "javier_recuenco",
+      "name": "Javier Recuenco",
+      "position": "CEO & Founder | Director del curso en Resolución de Problemas Complejos en el Ámbito Tecnológico",
+      "logo": ["singular_solving-logo.svg", "Singular Solving"]
     },
-    "programs": [
-      "Data Science",
-      "Ciberseguridad",
-      "Desarrollo Web",
-      "Inteligencia Artificial",
-      "Cloud Computing",
-      "Diseño UX/UI"
-    ],
-    "people": [
-      {
-        "photo": "raul_marin",
-        "name": "Raúl Marín",
-        "position": "Head teacher UX/UI",
-        "logo": ["immune-logo-white.svg", "IMMUNE Technology Institute"]
-      }
-    ],
-    "business": [
-      {
-        "src": "immune-logo.svg",
-        "alt": "IMMUNE Technology Institute",
-        "size": [144, 40]
-      }
-    ]
-  }
-  
+    {
+      "photo": "agustin_cuenca",
+      "name": "Agustín Cuenca",
+      "position": "CEO de Entaina y de GuardPass. Experto en Inteligencia Artificial",
+      "logo": ["entaina-logo.webp", "Entaina"]
+    },
+    {
+      "photo": "carlos_kuchkovsky",
+      "name": "Carlos Kuchkovsky",
+      "position": "CEO & Co-Founder",
+      "logo": ["qcentroid-logo-white.webp", "QCentroid"]
+    },
+    {
+      "photo": "jose_salanova",
+      "name": "José Luis Calvo Salanova",
+      "position": "AI Director & Co-Founder",
+      "logo": ["diverger-logo-white.svg", "Diverger"]
+    },
+    {
+      "photo": "julio_arbizu",
+      "name": "Julio Arbizu",
+      "position": ""
+    },
+    {
+      "photo": "raul_alelu",
+      "name": "Raúl Alelú",
+      "position": ""
+    },
+    {
+      "photo": "miguel_rego",
+      "name": "Miguel Rego",
+      "position": "CEO Funditec | Director del Área de Ciberseguridad",
+      "logo": ["incibe-logo.svg", "Incibe"]
+    },
+    {
+      "photo": "javier_soria",
+      "name": "Javier Soria",
+      "position": "CTO Director Técnico | Director del Bootcamp en Ciberseguridad",
+      "logo": ["telefonica-logo.svg", "Telefonica"]
+    },
+    {
+      "photo": "sergio_borgogno",
+      "name": "Sergio Borgogno",
+      "position": "Senior Partner & Head of M&A",
+      "logo": ["xvalue-logo.webp", "Xvalue"]
+    },
+    {
+      "photo": "alejandro_corletti",
+      "name": "Alejandro Corletti",
+      "position": "CEO",
+      "logo": ["darfe-logo.webp", "Darfe"]
+    },
+    {
+      "photo": "ramon_abad",
+      "name": "Ramón Abad",
+      "position": "Software Engineering Associate Manager",
+      "logo": ["accenture-logo-white.svg", "Accenture"]
+    },
+    {
+      "photo": "raul_marin",
+      "name": "Raúl Marín",
+      "position": "Director del área de Diseño UX/UI",
+      "logo": ["immune-logo-white.svg", "IMMUNE"]
+    }
+  ],
+  "business": [
+    {
+      "src": "iberdrola-logo.svg",
+      "alt": "Iberdrola"
+    },
+    {
+      "src": "caixabank_tech-logo.webp",
+      "alt": "CaixaBank Tech"
+    },
+    {
+      "src": "aws-logo.svg",
+      "alt": "AWS"
+    },
+    {
+      "src": "singular_solving-logo.svg",
+      "alt": "Singular Solving"
+    },
+    {
+      "src": "entaina-logo.webp",
+      "alt": "Entaina"
+    },
+    {
+      "src": "qcentroid-logo.webp",
+      "alt": "Qcentroid"
+    },
+    {
+      "src": "diverger-logo.svg",
+      "alt": "Diverger"
+    },
+    {
+      "src": "incibe-logo.svg",
+      "alt": "Incibe"
+    },
+    {
+      "src": "telefonica-logo.svg",
+      "alt": "Telefonica"
+    },
+    {
+      "src": "xvalue-logo.webp",
+      "alt": "Xvalue"
+    },
+    {
+      "src": "darfe-logo.webp",
+      "alt": "Darfe"
+    },
+    {
+      "src": "accenture-logo.svg",
+      "alt": "Accenture"
+    },
+    {
+      "src": "immune-logo.svg",
+      "alt": "IMMUNE Technology Institute"
+    }
+  ]
+}

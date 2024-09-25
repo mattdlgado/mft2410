@@ -1,4 +1,5 @@
 ---
+import Event from "../components/Event.astro";
 import Section from "./Section.astro";
 ---
 
@@ -12,22 +13,166 @@ import Section from "./Section.astro";
       >
       <thead>
         <tr>
-          <th></th>
-          <th colspan="2" align="center" style="width: 50%;">ESPACIO 1</th>
-          <th colspan="2" align="center" style="width: 50%;">ESPACIO 2</th>
-        </tr>
-        <tr>
           <th>HORARIO</th>
-          <th>CONTENIDO</th>
-          <th>PONENTES</th>
-          <th>CONTENIDO</th>
-          <th>PONENTES</th>
+          <th align="center" style="width: 50%;">ESPACIO 1</th>
+          <th align="center" style="width: 50%;">ESPACIO 2</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>9:00 - 9:30h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9:30 - 10:00h.</td>
+          <td colspan="2">
+            <Event>
+              <h3>Bienvenida</h3>
+            </Event>
+          </td>
+        </tr>
+        <tr>
           <td>10:00 - 10:30h.</td>
-          <td colspan="4" align="center"><strong>Bienvenida</strong></td>
+          <td rowspan="2">
+            <Event>
+              <h3>Mesa redonda</h3>
+              <p>
+                Moderador: Javier Recuenco | Ponentes: Agustín Cuenca, Carlos
+                Kuchkovsky y José Luis Calvo Salanova
+              </p>
+            </Event>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10:30 - 11:00h.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:00 - 11:30h.</td>
+          <td>
+            <Event>
+              <h3>Iberdrola</h3>
+              <p>Julio Arbizu</p>
+            </Event>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:30 - 12:00h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12:00 - 12:30h.</td>
+          <td>
+            <Event>
+              <h3>CaixaBank Tech: IA4DATA</h3>
+              <p>Alberto Barbado Gonzales</p>
+            </Event>
+          </td>
+          <td rowspan="3">
+            <Event>
+              <h3>Expo IMMUNE</h3>
+              <p>BeSecure: Marcos López Garau, Adrián Tomás Sánchez y Nicolás Pertierra Sandoval</p>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>12:30 - 13:00h.</td>
+          <td>
+            <Event>
+              <h3>
+                Del concepto a la realidad: mi viaje en startups de IA para la
+                salud mental
+              </h3>
+              <p>Raúl Alelú</p>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>13:00 - 13:30h.</td>
+          <td rowspan="2">
+            <Event>
+              <h3>Emprendimiento en ciberseguridad: una oportunidad</h3>
+              <p>
+                Moderador: Miguel Rego | Ponentes en la mesa: Javier Soria,
+                Sergio Borgogno y Alejandro Corletti
+              </p>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>13:30 - 14:00h.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14:00 - 14:30h.</td>
+          <td rowspan="2" colspan="2">
+            <Event>
+              <h3>Almuerzo</h3>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>14:30 - 15:00h.</td>
+        </tr>
+        <tr>
+          <td>15:00 - 15:30h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15:30 - 16:00h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16:00 - 16:30h.</td>
+          <td></td>
+          <td rowspan="2">
+            <Event>
+              <h3>Taller AWS</h3>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>16:30 - 17:00h.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:00 - 17:30h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:30 - 18:00h.</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18:00 - 18:30h.</td>
+          <td></td>
+          <td rowspan="2">
+            <Event>
+              <h3>Estrategias de delivery con Shift Left Testing</h3>
+              <p>Taller Cloud | Ramón Abad</p>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>18:30 - 19:00h.</td>
+          <td rowspan="2">
+            <Event>
+              <h3>Empleabilidad en el sector UX</h3>
+              <p>Raúl Marín</p>
+            </Event>
+          </td>
+        </tr>
+        <tr>
+          <td>19:00 - 19:30h.</td>
+          <td></td>
         </tr>
       </tbody>
     </table>
@@ -39,17 +184,14 @@ import Section from "./Section.astro";
     caption-side: bottom;
   }
 
-  th {
-    @apply border p-2 border-solid border-neutral-300;
-  }
-
+  th,
   td {
-    @apply border p-2 border-solid border-neutral-300;
+    @apply border p-2 border-solid border-neutral-200;
   }
 
-  tr:nth-child(odd) td {
+  /* tr:nth-child(odd) td {
     @apply bg-neutral-100;
-  }
+  } */
 
   tr > td:first-child {
     @apply whitespace-nowrap;
