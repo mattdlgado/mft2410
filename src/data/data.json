@@ -21,13 +21,13 @@
     {
       "photo": "javier_recuenco",
       "name": "Javier Recuenco",
-      "position": "CEO & Founder | Director del curso en Resolución de Problemas Complejos en el Ámbito Tecnológico",
+      "position": "CEO & Founder | Complex Problem Solving in Technology Course Director",
       "logo": ["singular_solving-logo.svg", "Singular Solving"]
     },
     {
       "photo": "agustin_cuenca",
       "name": "Agustín Cuenca",
-      "position": "CEO de Entaina y de GuardPass. Experto en Inteligencia Artificial",
+      "position": "Entaina & GuardPass CEO. Artificial Intelligence Expert",
       "logo": ["entaina-logo.webp", "Entaina"]
     },
     {
@@ -55,13 +55,13 @@
     {
       "photo": "miguel_rego",
       "name": "Miguel Rego",
-      "position": "CEO Funditec | Director del Área de Ciberseguridad",
+      "position": "CEO Funditec | Cybersecurity Area Director",
       "logo": ["incibe-logo.svg", "Incibe"]
     },
     {
       "photo": "javier_soria",
       "name": "Javier Soria",
-      "position": "CTO Director Técnico | Director del Bootcamp en Ciberseguridad",
+      "position": "CTO | Cybersecurity Bootcamp Director",
       "logo": ["telefonica-logo.svg", "Telefonica"]
     },
     {
@@ -85,7 +85,7 @@
     {
       "photo": "raul_marin",
       "name": "Raúl Marín",
-      "position": "Director del área de Diseño UX/UI",
+      "position": "Design UX/UI Area Director",
       "logo": ["immune-logo-white.svg", "IMMUNE"]
     }
   ],
