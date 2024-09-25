@@ -4,7 +4,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="empresas" t1="Buscan" t2="talento" light>
-  <div class="grid md:grid-cols-2 gap-10">
+  <div class="grid lg:grid-cols-2 gap-10">
     <div>
       <p class="mb-4">
         <strong>Madrid4tech</strong> regresa este <strong>{data.date}</strong>
@@ -28,7 +28,7 @@ import Section from "./Section.astro";
     </div>
 
     <div
-      class="grid grid-cols-2 md:grid-cols-3 gap-1"
+      class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-1"
     >
       {
         data.business.map((item: { src: string; alt: string }) => (
