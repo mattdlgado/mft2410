@@ -45,7 +45,8 @@
     {
       "photo": "julio_arbizu",
       "name": "Julio Arbizu",
-      "position": ""
+      "position": "OT Cybersecurity Engineer",
+      "logo": ["iberdrola-logo.svg", "Iberdrola"]
     },
     {
       "photo": "alberto_barbado",
@@ -98,14 +99,6 @@
   ],
   "business": [
     {
-      "src": "iberdrola-logo.svg",
-      "alt": "Iberdrola"
-    },
-    {
-      "src": "caixabank_tech-logo.webp",
-      "alt": "CaixaBank Tech"
-    },
-    {
       "src": "aws-logo.svg",
       "alt": "AWS"
     },
@@ -124,6 +117,18 @@
     {
       "src": "diverger-logo.svg",
       "alt": "Diverger"
+    },
+    {
+      "src": "iberdrola-logo.svg",
+      "alt": "Iberdrola"
+    },
+    {
+      "src": "caixabank_tech-logo.webp",
+      "alt": "CaixaBank Tech"
+    },
+    {
+      "src": "ever3-logo.svg",
+      "alt": "Ever3"
     },
     {
       "src": "incibe-logo.svg",
