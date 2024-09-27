@@ -31,12 +31,6 @@
       "logo": ["entaina-logo.webp", "Entaina"]
     },
     {
-      "photo": "carlos_kuchkovsky",
-      "name": "Carlos Kuchkovsky",
-      "position": "CEO & Co-Founder",
-      "logo": ["qcentroid-logo-white.webp", "QCentroid"]
-    },
-    {
       "photo": "jose_salanova",
       "name": "José Luis Calvo Salanova",
       "position": "AI Director & Co-Founder",
@@ -69,8 +63,7 @@
     {
       "photo": "javier_soria",
       "name": "Javier Soria",
-      "position": "CTO | Cybersecurity Bootcamp Director",
-      "logo": ["telefonica-logo.svg", "Telefonica"]
+      "position": "CTO | Cybersecurity Bootcamp Director"
     },
     {
       "photo": "sergio_borgogno",
@@ -109,10 +102,6 @@
     {
       "src": "entaina-logo.webp",
       "alt": "Entaina"
-    },
-    {
-      "src": "qcentroid-logo.webp",
-      "alt": "Qcentroid"
     },
     {
       "src": "diverger-logo.svg",
