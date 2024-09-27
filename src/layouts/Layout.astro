@@ -1,5 +1,8 @@
 ---
 import SEO from "../components/SEO.astro";
+import AnalyticsBody from "../sections/AnalyticsBody.astro";
+import AnalyticsFooter from "../sections/AnalyticsFooter.astro";
+import AnalyticsHead from "../sections/AnalyticsHead.astro";
 
 interface Props {
   title: string;
@@ -27,11 +30,14 @@ const { title, description, keywords, canonical, robots, img } = Astro.props;
     <link rel="preload" href="/assets/images/expoimmune.webp" as="image" />
     <link rel="preload" href="/assets/images/madrid.webp" as="image" />
     <link rel="preload" href="/assets/images/audiencia.webp" as="image" />
+    <AnalyticsHead />
   </head>
   <body
     class="bg-neutral-950 font-sans text-neutral-50 overflow-x-hidden min-h-dvh"
   >
+    <AnalyticsBody />
     <slot />
+    <AnalyticsFooter />
   </body>
 </html>
 
