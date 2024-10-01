@@ -92,10 +92,6 @@
   ],
   "business": [
     {
-      "src": "aws-logo.svg",
-      "alt": "AWS"
-    },
-    {
       "src": "singular_solving-logo.svg",
       "alt": "Singular Solving"
     },
@@ -138,6 +134,14 @@
     {
       "src": "accenture-logo.svg",
       "alt": "Accenture"
+    },
+    {
+      "src": "aws-logo.svg",
+      "alt": "AWS"
+    },
+    {
+      "src": "teatro_real-logo.webp",
+      "alt": "Teatro Real"
     },
     {
       "src": "immune-logo.svg",
