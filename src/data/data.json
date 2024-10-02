@@ -33,8 +33,8 @@
     {
       "photo": "irene_serrano",
       "name": "Irene Serrano",
-      "position": "Partner",
-      "logo": ["bip-logo.svg", "Bip Group"]
+      "position": "Partner / Co-lider AI practice BIP xTech",
+      "logo": ["bip-logo.svg", "BIP xTech"]
     },
     {
       "photo": "jose_salanova",
@@ -113,7 +113,7 @@
     },
     {
       "src": "bip-logo.svg",
-      "alt": "Bip Group"
+      "alt": "BIP xTech"
     },
     {
       "src": "diverger-logo.svg",
