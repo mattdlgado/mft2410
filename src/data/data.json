@@ -84,6 +84,12 @@
       "logo": ["darfe-logo.webp", "Darfe"]
     },
     {
+      "photo": "guillermo_ruiz",
+      "name": "Guillermo Ruiz",
+      "position": "Senior Developer Avocate",
+      "logo": ["aws-logo-white.svg", "AWS"]
+    },
+    {
       "photo": "ramon_abad",
       "name": "Ramón Abad",
       "position": "Software Engineering Associate Manager",
