@@ -31,6 +31,12 @@
       "logo": ["entaina-logo.webp", "Entaina"]
     },
     {
+      "photo": "irene_serrano",
+      "name": "Irene Serrano",
+      "position": "Partner",
+      "logo": ["bip-logo.svg", "Bip Group"]
+    },
+    {
       "photo": "jose_salanova",
       "name": "José Luis Calvo Salanova",
       "position": "AI Director & Co-Founder",
@@ -58,7 +64,7 @@
       "photo": "miguel_rego",
       "name": "Miguel Rego",
       "position": "CEO Funditec | Cybersecurity Area Director",
-      "logo": ["incibe-logo.svg", "Incibe"]
+      "logo": ["funditec-logo.webp", "Funditec"]
     },
     {
       "photo": "javier_soria",
@@ -100,6 +106,10 @@
       "alt": "Entaina"
     },
     {
+      "src": "bip-logo.svg",
+      "alt": "Bip Group"
+    },
+    {
       "src": "diverger-logo.svg",
       "alt": "Diverger"
     },
@@ -116,8 +126,8 @@
       "alt": "Ever3"
     },
     {
-      "src": "incibe-logo.svg",
-      "alt": "Incibe"
+      "src": "funditec-logo.webp",
+      "alt": "Funditec"
     },
     {
       "src": "telefonica-logo.svg",
@@ -142,6 +152,14 @@
     {
       "src": "teatro_real-logo.webp",
       "alt": "Teatro Real"
+    },
+    {
+      "src": "talentoo-logo.webp",
+      "alt": "Talentoo"
+    },
+    {
+      "src": "cyber_talent-logo.svg",
+      "alt": "Cybertalent"
     },
     {
       "src": "immune-logo.svg",
