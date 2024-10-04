@@ -16,7 +16,9 @@ const { id, light, t1, t2, class: className, ...rest } = Astro.props;
   id={id}
   class:list={[
     "py-20",
-    { "bg-neutral-50 text-neutral-950 border-t border-t-neutral-200": light },
+    {
+      "bg-neutral-50 text-neutral-950 border-t border-t-neutral-200": light,
+    },
     className,
   ]}
   {...rest}
