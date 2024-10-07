@@ -100,6 +100,12 @@
       "name": "Raúl Marín",
       "position": "Design UX/UI Area Director",
       "logo": ["immune-logo-white.svg", "IMMUNE"]
+    },
+    {
+      "photo": "victor_gonzalez",
+      "name": "Víctor González",
+      "position": "Senior UX/UI Designer y Design Ops",
+      "logo": ["entain-logo.svg", "Entain"]
     }
   ],
   "business": [
