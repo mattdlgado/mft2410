@@ -1,0 +1,38 @@
+---
+import ImmuneLogo from "../components/ImmuneLogo.astro";
+import LogoWhite from "../components/LogoWhite.astro";
+import Video from "../components/Video.astro";
+---
+
+<main class="min-h-dvh relative overflow-hidden z-50">
+  <div
+    class="min-h-dvh p-8 flex flex-col items-center justify-between gap-8 text-center"
+  >
+    <ImmuneLogo />
+
+    <div class="flex flex-col items-center gap-4">
+      <LogoWhite />
+
+      <h1 class="text-2xl">Gracias, nos vemos en la próxima edición</h1>
+    </div>
+
+    <footer>
+      <p>
+        Más de IMMUNE en <a
+          href="https://immune.institute"
+          target="_blank"
+          class="underline">https://immune.institute</a
+        >
+      </p>
+      <p class="my-4">
+        Nos vemos en nuestro campus en <a
+          href="https://www.google.es/maps/place/IMMUNE+Technology+Institute/@40.4496289,-3.6945551,17z/data=!3m2!4b1!5s0xd4228e343d1ae51:0xdff3b6df8b3f856a!4m6!3m5!1s0xd4229189dbac4db:0x5400e56fb9abf5b1!8m2!3d40.4496248!4d-3.6919802!16s%2Fg%2F11h6g486xb?hl=es&entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          class="underline">P.º de la Castellana, 89, Tetuán, 28046 Madrid</a
+        >
+      </p>
+    </footer>
+  </div>
+
+  <Video />
+</main>

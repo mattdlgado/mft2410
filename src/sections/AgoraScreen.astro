@@ -21,31 +21,30 @@ import MapPin from "../components/icons/MapPin.astro";
 
       <h1 class="text-xl">
         <span class="hidden">Madridfortech</span> vuelve en su <strong
-          >V EDICIÓN</strong
+          >{data.edition} EDICIÓN</strong
         > de encuentro de talento tecnológico
       </h1>
+      <Countdown />
+    </div>
 
-      <p class="text-xl flex gap-1 flex-wrap justify-center">
+    <img
+      src="/assets/logos/qr.svg"
+      alt=""
+      height="240"
+      width="240"
+      loading="lazy"
+    />
+
+    <footer>
+      <p class="text-xl flex gap-1 flex-wrap justify-center mb-4">
         <Badge text={data.date}>
           <CalendarEvent slot="icon" />
         </Badge>
         <Badge text="10:00h. (CET)">
           <Clock slot="icon" />
         </Badge>
-        <Badge text="Paseo de la Castellana, 89 / Online">
-          <MapPin slot="icon" />
-        </Badge>
       </p>
-    </div>
-
-    <footer>
-      <Countdown />
-      <p class="my-4">
-        Conéctate online o ven a nuestro campus en <a
-          href="https://www.google.es/maps/place/IMMUNE+Technology+Institute/@40.4496289,-3.6945551,17z/data=!3m2!4b1!5s0xd4228e343d1ae51:0xdff3b6df8b3f856a!4m6!3m5!1s0xd4229189dbac4db:0x5400e56fb9abf5b1!8m2!3d40.4496248!4d-3.6919802!16s%2Fg%2F11h6g486xb?hl=es&entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank">P.º de la Castellana, 89, Tetuán, 28046 Madrid</a
-        >
-      </p>
+      <p class="my-4">Conéctate online o ven al campus</p>
     </footer>
   </div>
 
