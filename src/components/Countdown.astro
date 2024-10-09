@@ -10,25 +10,36 @@ const eventInProgress = targetDate - now <= 0;
 
 {
   eventInProgress ? (
+    <>
       <p class="text-3xl mb-4">Evento en curso...</p>
       <p class="mb-4">
-        Conéctate online al <a
+        Conéctate online al{" "}
+        <a
           href="https://immune-institute.zoom.us/webinar/register/WN_o3_jopHKToeDb7v6pw1L5g"
           target="_blank"
           class="underline"
-        > Espacio 1 </a> / <a
+        >
+          Espacio 1
+        </a>{" "}
+        /{" "}
+        <a
           href="https://us06web.zoom.us/webinar/register/WN_iIJS0MaiQz2NuJpS8lbMwg"
           target="_blank"
           class="underline"
-        >Espacio 2</a> o ven a nuestro campus en 
+        >
+          Espacio 2
+        </a>{" "}
+        o ven a nuestro campus en{" "}
         <a href={data.legal.address.url} target="_blank" class="underline">
           {data.legal.address.text}
         </a>
       </p>
+    </>
   ) : (
+    <>
       <p id="countdown" class="text-3xl mb-4 select-none" />
       <p class="mb-4">
-        Conéctate online o ven a nuestro campus en 
+        Conéctate online o ven a nuestro campus en
         <a href={data.legal.address.url} target="_blank" class="underline">
           {data.legal.address.text}
         </a>
@@ -39,6 +50,7 @@ const eventInProgress = targetDate - now <= 0;
         </h2>
         <EventButton />
       </div>
+    </>
   )
 }
 
