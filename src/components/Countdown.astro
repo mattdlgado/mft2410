@@ -3,9 +3,9 @@ import Badge from "./Badge.astro";
 import EventButton from "./EventButton.astro";
 
 // Definir la fecha del evento
-const targetDate = new Date("2024-10-09T10:00:00");
-const now = new Date();
-const eventInProgress = targetDate - now <= 0;
+const targetDate = new Date("2024-10-09T10:00:00").getTime(); // Obtener el tiempo en milisegundos
+const now = new Date().getTime(); // Obtener el tiempo en milisegundos
+const eventInProgress = targetDate - now <= 0; // Comparar tiempos en milisegundos
 
 // URL de la ubicación del evento
 const locationURL =
