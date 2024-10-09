@@ -15,40 +15,26 @@ const locationURL =
 {
   eventInProgress ? (
     <div id="message">
-      <p class="text-3xl mb-4">El evento está en curso...</p>
+      <p class="text-3xl mb-4">Evento en curso...</p>
       <p class="mb-4">
-        Conéctate online al{" "}
-        <a
+        Conéctate online al <a
           href="https://immune-institute.zoom.us/webinar/register/WN_o3_jopHKToeDb7v6pw1L5g"
           target="_blank"
           class="underline"
-        >
-          Espacio 1
-        </a>{" "}
-        /{" "}
-        <a
+        > Espacio 1 </a> / <a
           href="https://us06web.zoom.us/webinar/register/WN_iIJS0MaiQz2NuJpS8lbMwg"
           target="_blank"
           class="underline"
-        >
-          Espacio 2
-        </a>{" "}
-        o ven a nuestro campus en{" "}
+        >Espacio 2</a> o ven a nuestro campus en 
         <a href={locationURL} target="_blank" class="underline">
           P.º de la Castellana, 89, Tetuán, 28046 Madrid
         </a>
       </p>
     </div>
   ) : (
-    <div id="countdown">
+      <p id="countdown" class="text-3xl mb-4 select-none" />
       <p class="mb-4">
-        <span id="days" class="text-3xl" />
-        <span id="hours" class="text-3xl" />
-        <span id="minutes" class="text-3xl" />
-        <span id="seconds" class="text-3xl" />
-      </p>
-      <p class="mb-4">
-        Conéctate online o ven a nuestro campus en{" "}
+        Conéctate online o ven a nuestro campus en 
         <a href={locationURL} target="_blank" class="underline">
           P.º de la Castellana, 89, Tetuán, 28046 Madrid
         </a>
@@ -59,51 +45,32 @@ const locationURL =
         </h2>
         <EventButton />
       </div>
-    </div>
   )
 }
 
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const targetDate = new Date("2024-10-09T10:00:00");
-    const daysElement = document.getElementById("days");
-    const hoursElement = document.getElementById("hours");
-    const minutesElement = document.getElementById("minutes");
-    const secondsElement = document.getElementById("seconds");
+  const countdownDate = new Date("2024-10-09T10:00:00").getTime();
 
-    function formatTime(remainingTime) {
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-      return { days, hours, minutes, seconds };
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    if (distance < 0) {
+      clearInterval(x);
+      return;
     }
 
-    function updateCountdown() {
-      const now = new Date();
-      const remainingTime = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      if (remainingTime > 0) {
-        const { days, hours, minutes, seconds } = formatTime(remainingTime);
-        daysElement.textContent = `${days}d `;
-        hoursElement.textContent = `${hours}h `;
-        minutesElement.textContent = `${minutes}m `;
-        secondsElement.textContent = `${seconds}s`;
-      } else {
-        clearInterval(intervalId);
-        daysElement.textContent = "0d ";
-        hoursElement.textContent = "0h ";
-        minutesElement.textContent = "0m ";
-        secondsElement.textContent = "0s";
-      }
-    }
+    document.getElementById("countdown").innerHTML =
+      `${days}d ${hours}h ${minutes}m ${seconds}s `;
+  };
 
-    // Inicializar la cuenta regresiva y actualizar cada segundo
-    updateCountdown();
-    const intervalId = setInterval(updateCountdown, 1000);
-  });
+  const x = setInterval(updateCountdown, 1000);
+  updateCountdown();
 </script>
