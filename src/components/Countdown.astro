@@ -1,43 +1,109 @@
-<p id="countdown" class="text-3xl">
-  <span id="days"></span>
-  <span id="hours"></span>
-  <span id="minutes"></span>
-  <span id="seconds"></span>
-</p>
+---
+import Badge from "./Badge.astro";
+import EventButton from "./EventButton.astro";
+
+// Definir la fecha del evento
+const targetDate = new Date("2024-10-09T10:00:00");
+const now = new Date();
+const eventInProgress = targetDate - now <= 0;
+
+// URL de la ubicación del evento
+const locationURL =
+  "https://www.google.es/maps/place/IMMUNE+Technology+Institute/@40.4496289,-3.6945551,17z/data=!3m2!4b1!5s0xd4228e343d1ae51:0xdff3b6df8b3f856a!4m6!3m5!1s0xd4229189dbac4db:0x5400e56fb9abf5b1!8m2!3d40.4496248!4d-3.6919802!16s%2Fg%2F11h6g486xb?hl=es&entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D";
+---
+
+{
+  eventInProgress ? (
+    <div id="message">
+      <p class="text-3xl mb-4">El evento está en curso...</p>
+      <p class="mb-4">
+        Conéctate online al{" "}
+        <a
+          href="https://immune-institute.zoom.us/webinar/register/WN_o3_jopHKToeDb7v6pw1L5g"
+          target="_blank"
+          class="underline"
+        >
+          Espacio 1
+        </a>{" "}
+        /{" "}
+        <a
+          href="https://us06web.zoom.us/webinar/register/WN_iIJS0MaiQz2NuJpS8lbMwg"
+          target="_blank"
+          class="underline"
+        >
+          Espacio 2
+        </a>{" "}
+        o ven a nuestro campus en{" "}
+        <a href={locationURL} target="_blank" class="underline">
+          P.º de la Castellana, 89, Tetuán, 28046 Madrid
+        </a>
+      </p>
+    </div>
+  ) : (
+    <div id="countdown">
+      <p class="mb-4">
+        <span id="days" class="text-3xl" />
+        <span id="hours" class="text-3xl" />
+        <span id="minutes" class="text-3xl" />
+        <span id="seconds" class="text-3xl" />
+      </p>
+      <p class="mb-4">
+        Conéctate online o ven a nuestro campus en{" "}
+        <a href={locationURL} target="_blank" class="underline">
+          P.º de la Castellana, 89, Tetuán, 28046 Madrid
+        </a>
+      </p>
+      <div class="flex justify-center gap-1 flex-wrap">
+        <h2>
+          <Badge text="Te esperamos el 9 de octubre del 2024" red />
+        </h2>
+        <EventButton />
+      </div>
+    </div>
+  )
+}
 
 <script is:inline>
-  function updateCountdown() {
-    // Establece la fecha objetivo.
-    const now = new Date();
-    // Mes (empieza en 0), día, hora, min
-    const targetDate = new Date(now.getFullYear(), 9, 9, 10, 0);
+  document.addEventListener("DOMContentLoaded", () => {
+    const targetDate = new Date("2024-10-09T10:00:00");
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
 
-    // Calcula la diferencia en milisegundos
-    const diff = targetDate - now;
-
-    // Convierte la diferencia en días, horas, minutos y segundos
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    // Actualiza el HTML
-    document.getElementById("days").innerHTML = days + "d : ";
-    document.getElementById("hours").innerHTML = hours + "h : ";
-    document.getElementById("minutes").innerHTML = minutes + "m : ";
-    document.getElementById("seconds").innerHTML = seconds + "s";
-
-    // Si el contador llega a 0, mostrar mensaje
-    if (diff < 0) {
-      clearInterval(interval);
-      document.getElementById("countdown").innerHTML =
-        '';
+    function formatTime(remainingTime) {
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+      return { days, hours, minutes, seconds };
     }
-  }
 
-  // Actualiza el contador cada segundo
-  const interval = setInterval(updateCountdown, 1000);
+    function updateCountdown() {
+      const now = new Date();
+      const remainingTime = targetDate - now;
 
-  // Llama a la función inmediatamente para iniciar el contador
-  updateCountdown();
+      if (remainingTime > 0) {
+        const { days, hours, minutes, seconds } = formatTime(remainingTime);
+        daysElement.textContent = `${days}d `;
+        hoursElement.textContent = `${hours}h `;
+        minutesElement.textContent = `${minutes}m `;
+        secondsElement.textContent = `${seconds}s`;
+      } else {
+        clearInterval(intervalId);
+        daysElement.textContent = "0d ";
+        hoursElement.textContent = "0h ";
+        minutesElement.textContent = "0m ";
+        secondsElement.textContent = "0s";
+      }
+    }
+
+    // Inicializar la cuenta regresiva y actualizar cada segundo
+    updateCountdown();
+    const intervalId = setInterval(updateCountdown, 1000);
+  });
 </script>
